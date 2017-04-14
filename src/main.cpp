@@ -45,7 +45,7 @@ int main(int argc, const char* argv[]) {
 
     int num = multinational.getSellProduct(CIGARS);
 
-    std::cout << "Number of product of type " << CIGARS << num  << std::endl;
+    std::cout << "Number of product of type " << ToString(CIGARS) << " " << num  << std::endl;
 
     return 0;
 }

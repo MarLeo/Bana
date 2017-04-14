@@ -16,6 +16,19 @@ enum ProductType {CIGARETTE, CIGARILLOS, CIGARS, TOBACCO};
 };
 */
 
+// to convert enum to string type
+inline const char* ToString(ProductType type)
+{
+    switch (type)
+    {
+        case CIGARETTE:     return "Cigarette";
+        case CIGARILLOS:    return "Cigarillos";
+        case CIGARS:        return "Cigars";
+        case TOBACCO:       return "Tobacco";
+        default:            return "[Unknown ProductType]";
+    }
+}
+
 class Product {
 
     public:
