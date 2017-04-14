@@ -16,13 +16,14 @@ WinnersQueue::WinnersQueue(const Championship &_championship)
 
 void WinnersQueue::push(const Swimmer &swimmer) {
 
-    std::find_if(swimmers.begin(), swimmers.end(), [](Swimmer s)->void {
+    /*std::find_if(swimmers.begin(), swimmers.end(), [](Swimmer s)->void {
         if(numWinnings(swimmer) > numWinnings(s)) {
             //swimmers.insert(swimmers.size(), swimmer);
         }
     });
 
     swimmers.push_back(swimmer);
+     */
 }
 
 Swimmer WinnersQueue::pop() {
