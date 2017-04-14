@@ -3,7 +3,7 @@
 //
 
 #include <algorithm>
-#include "Championship.h"
+#include "../headers/Championship.h"
 
 Championship::Championship(const std::string &_name)
  : name(_name) {}
@@ -27,7 +27,7 @@ std::string Championship::getName() const {
     return std::string(name);
 }
 
-std::list<Swimmer>& Championship::getClassification(const Role &role) {
+std::list<Swimmer> & Championship::getClassification(const Role &role) const {
     std::list<Swimmer>* result = new std::list<Swimmer>();
     /*for (std::list<Swimmer>::const_iterator iterator = players.begin(); iterator!=players.end(); iterator++) {
         if (iterator->getRole() == role)
@@ -42,7 +42,6 @@ std::list<Swimmer>& Championship::getClassification(const Role &role) {
         return role == s.getRole();
     });
 
-
     return *result;
 }
 
@@ -53,6 +52,7 @@ std::list<Swimmer> Championship::getPlayers() const {
 void Championship::addPlayer(Swimmer player) {
     players.push_back(player);
 }
+
 
 
 

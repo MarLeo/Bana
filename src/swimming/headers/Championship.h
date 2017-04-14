@@ -14,14 +14,15 @@ class Championship {
 
     public:
         Championship(const std::string& _name);
-        Championship(const Championship& rhs);
-        Championship& operator= (const Championship& rhs);
+        Championship(const Championship& rhs); // copy constructor
+        Championship& operator= (const Championship& rhs); // assignment operator
         virtual ~Championship();
 
         std::string getName() const ;
         void addPlayer(Swimmer player);
         std::list<Swimmer> getPlayers() const ;
-        std::list<Swimmer>& getClassification(const Role& role);
+        std::list<Swimmer> & getClassification(const Role& role) const;
+
 
     private:
         std::string name;

@@ -15,13 +15,14 @@ class Swimmer {
 
         Swimmer(const std::string& _name, const std::string& _surname, const Role& _role);
         Swimmer(const Swimmer& rhs); // copy constructor
-        Swimmer& operator=(const Swimmer& rhs);
+        Swimmer& operator=(const Swimmer& rhs); // assignment operator
         virtual ~Swimmer();
 
         Role getRole() const ;
         std::string getName() const ;
         std::string getSurname() const ;
         bool operator== (const Swimmer& rhs);
+        void print();
 
     private:
         std::string name;

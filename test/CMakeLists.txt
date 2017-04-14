@@ -2,9 +2,15 @@ cmake_minimum_required(VERSION 3.7)
 project(Bana)
 
 
-set(SOURCE_FILES tests/swimming/swimmingTest.cpp ../src/swimming/Swimmer.h ../src/swimming/Swimmer.cpp ../src/swimming/Championship.cpp ../src/swimming/Championship.h)
+set(SOURCE_FILES tests/swimming/SwimmingTest.cpp ../src/swimming/headers/Swimmer.h ../src/swimming/body/Swimmer.cpp
+        ../src/swimming/body/Championship.cpp ../src/swimming/headers/Championship.h main.cpp tests/swimming/ChampionshipTest.cpp
+        ../src/swimming/headers/WinnersQueue.h ../src/swimming/body/WinnersQueue.cpp)
 
-add_executable(tests ${SOURCE_FILES} tests/swimming/swimmingTest.cpp ../src/swimming/Swimmer.h ../src/swimming/Swimmer.cpp ../src/swimming/Championship.cpp ../src/swimming/Championship.h)
+add_executable(tests ${SOURCE_FILES} tests/swimming/SwimmingTest.cpp
+        ../src/swimming/headers/Swimmer.h ../src/swimming/body/Swimmer.cpp
+        ../src/swimming/body/Championship.cpp ../src/swimming/headers/Championship.h
+        main.cpp tests/swimming/ChampionshipTest.cpp
+        ../src/swimming/headers/WinnersQueue.h ../src/swimming/body/WinnersQueue.cpp)
 
 
 

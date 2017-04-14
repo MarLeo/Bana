@@ -2,7 +2,7 @@
 // Created by marti on 13/04/2017.
 //
 
-#include "Swimmer.h"
+#include "../headers/Swimmer.h"
 #include <sstream>
 
 Swimmer::Swimmer(const std::string& _name, const std::string& _surname, const Role& _role)
@@ -50,8 +50,13 @@ std::string Swimmer::getSurname() const {
 }
 
 bool Swimmer::operator==(const Swimmer &rhs) {
-    if (this == &rhs) return true;
-    return false;
+    return this->name == rhs.name && this->surname == rhs.surname
+            && this->role == rhs.role;
+}
+
+void Swimmer::print() {
+    std::cout << "Name: " << this->getName() << " Surname : " << this->getSurname() << " Role : " << this->getRole() << std::endl;
+
 }
 
 
