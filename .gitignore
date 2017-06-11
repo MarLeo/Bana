@@ -465,7 +465,7 @@ dist/
 downloads/
 eggs/
 .eggs/
-lib/
+test/lib/
 lib64/
 parts/
 sdist/
@@ -544,3 +544,4 @@ ENV/
 .ropeproject
 
 /cmake-build-debug/
+/test/lib/

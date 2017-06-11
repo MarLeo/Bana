@@ -3,7 +3,6 @@
 //
 
 #include <gtest/gtest.h>
-#include <gmock/gmock.h>
 
 #include "../../../src/swimming/headers/Championship.h"
 
